@@ -1,0 +1,4 @@
+pane	setup	1	:[tmux]	1	:*	1	:/Users/ljohnson/slack/chef-repo	0	zsh	:
+pane	setup	1	:[tmux]	1	:*	2	:/Users/ljohnson/slack	1	ssh	:ssh z-ops-ljohnson-kangaroo.ec2.tinyspeck.com
+window	setup	1	1	:*	7f51,191x44,0,0{80x44,0,0,0,110x44,81,0,7}
+state	setup	

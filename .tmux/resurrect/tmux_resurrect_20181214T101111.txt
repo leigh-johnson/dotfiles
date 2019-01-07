@@ -1,0 +1,5 @@
+pane	setup	1	:vim	1	:*	1	:/Users/ljohnson/docs	1	vim	:vim ops/mysql/auto-reprovision-mysql-master.md
+pane	setup	1	:vim	1	:*	2	:/Users/ljohnson	0	vim	:vim /Users/ljohnson/.tmux.conf
+pane	setup	1	:vim	1	:*	3	:/	0	vim	:vim /usr/local/etc/lynx.lss
+window	setup	1	1	:*	4056,238x60,0,0{119x60,0,0,0,118x60,120,0[118x30,120,0,1,118x29,120,31,7]}
+state	setup	

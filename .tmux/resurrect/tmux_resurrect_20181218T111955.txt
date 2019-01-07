@@ -1,0 +1,6 @@
+pane	setup	1	:zsh	1	:*	1	:/Users/ljohnson/docs	0	zsh	:
+pane	setup	1	:zsh	1	:*	2	:/Users/ljohnson/slack	0	zsh	:
+pane	setup	1	:zsh	1	:*	3	:/Users/ljohnson/slack/chef-repo	0	zsh	:
+pane	setup	1	:zsh	1	:*	4	:/Users/ljohnson	1	zsh	:
+window	setup	1	1	:*	969e,208x55,0,0{78x55,0,0,0,129x55,79,0[129x6,79,0,7,129x24,79,7,9,129x23,79,32,10]}
+state	setup	

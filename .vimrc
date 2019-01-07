@@ -1,4 +1,13 @@
 
+set number
+" fzf as a vim plugin
+" https://github.com/junegunn/fzf#as-vim-plugin
+
+set rtp+=/usr/local/opt/fzf
+set rtp+=~/.fzf
+
+
+
 " Use ag instead of ack
 let g:ackprg = 'ag --vimgrep'
 

@@ -8,6 +8,10 @@
 # you're using it on Mac OS X, [iTerm 2](http://www.iterm2.com/) over
 # Terminal.app - it has significantly better color fidelity.
 
+
+BULLETTRAIN_IS_SSH_CLIENT=true
+BULLETTRAIN_CONTEXT_BG=magenta
+
 # ------------------------------------------------------------------------------
 # CONFIGURATION
 # The default configuration, that can be overwrite in your .zshrc file
@@ -21,15 +25,17 @@ if [ ! -n "${BULLETTRAIN_PROMPT_ORDER+1}" ]; then
     #time
     status
     custom
-    #context
+    context
     dir
     perl
     ruby
     virtualenv
-    nvm
+    #nvm
     go
     git
     hg
+    #rust
+    #elixir
     cmd_exec_time
   )
 fi

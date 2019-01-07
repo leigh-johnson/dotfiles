@@ -1,0 +1,4 @@
+pane	setup	1	:git	1	:*	1	:/Users/ljohnson/src	1	git	:/Library/Developer/CommandLineTools/usr/bin/git clone git@slack-github.com:slack/webapp.git
+pane	setup	1	:git	1	:*	2	:/Users/ljohnson	0	vim	:vim /Users/ljohnson/.tmux.conf
+window	setup	1	1	:*	82b9,238x60,0,0{91x60,0,0,0,146x60,92,0,1}
+state	setup	

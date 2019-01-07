@@ -1,0 +1,6 @@
+pane	setup	1	:zsh	1	:*	1	:/Users/ljohnson/slack/docs	1	zsh	:
+pane	setup	1	:zsh	1	:*	2	:/Users/ljohnson/slack	0	ssh	:ssh -A z-ops-ljohnson-frog.ec2.tinyspeck.com
+pane	setup	1	:zsh	1	:*	3	:/Users/ljohnson/slack	0	zsh	:
+pane	setup	1	:zsh	1	:*	4	:/Users/ljohnson	0	zsh	:
+window	setup	1	1	:*	23e9,208x55,0,0{98x55,0,0,0,109x55,99,0[109x28,99,0,7,109x22,99,29,9,109x3,99,52,10]}
+state	setup	
