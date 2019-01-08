@@ -2,11 +2,16 @@
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 
-export TERM=screen-256color
+export TERM=xterm-256color
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/$(id -un)/.oh-my-zsh"
-
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
+	export ZSH="/home/$(id -un)/.oh-my-zsh"
+ elif [[ "$OSTYPE" == "darwin"* ]]; then
+	 export ZSH="/Users/$(id -un)/.oh-my-zsh"
+ else
+	 echo "add support for ${$OSTYPE} to your dotfile"
+ fi
 
 # nvm
 
@@ -33,7 +38,7 @@ ZSH_THEME="bullet-train"
 
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
+HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
@@ -120,4 +125,4 @@ cpdotfiles () {
 	scp -rq ~/.zshrc ~/.oh-my-zsh ~/.vim ~/.vimrc ~/.tmux ~/.tmux.conf ~/.gitconfig $(id -un)@$1:~/
 }
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

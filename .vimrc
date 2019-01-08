@@ -23,6 +23,8 @@ call plug#begin('~/.vim/plugged')
 " native vimscript statusline plugin inspired by powerline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'editorconfig/editorconfig-vim'
+  
 set mouse=a
 call plug#end()
 
