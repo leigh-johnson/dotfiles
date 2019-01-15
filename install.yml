@@ -19,7 +19,7 @@
         dest: ~/.vim
     - copy:
         src: ~/dotfiles/.tmux.conf
-        dest: ~/dotfiles/.tmux.conf
+        dest: ~/.tmux.conf
     - copy:
         src: ~/dotfiles/.oh-my-zsh/custom/themes/bullet-train.zsh-theme
         dest: ~/.oh-my-zsh/themes/bullet-train.zsh-theme
