@@ -1,26 +1,36 @@
-host: 127.0.0.1
-connection: local
-tasks:
-- name: Install oh-my-zsh
-  command: sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-- copy:
-    src: ~/dotfiles/.zshrc
-    dest: ~/.zshrc
-- copy:
-    src: ~/dotfiles/.vimrc
-    dest: ~/dotfiles/.vimrc
-- copy:
-    src: ~/dotfiles/.vim
-    dest: ~/.vim
-- copy:
-    src: ~/dotfiles/.tmux.conf
-    dest: ~/dotfiles/.tmux.conf
-- copy:
-    src: ~/dotfiles/.oh-my-zsh/custom
-    dest: ~/.oh-my-zsh/custom
-- name: Install tpm
-  git:
-    repo: git clone https://github.com/tmux-plugins/tpm
-    dest: ~/.tmux/plugins/tpm
-- name: Install tmux plugins
-  command: .tmux/plugins/tpm/bin/install_plugins
+- name: Install dotfiles
+  hosts: 127.0.0.1
+  tasks:
+    - name: Install cowsay
+      become: true
+      command: apt-get install cowsay
+    - name: Enable `chsh`
+      command: sed s/required/sufficient/g -i /etc/pam.d/chsh
+      become: true
+    - shell: sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+    - copy:
+        src: ~/dotfiles/.zshrc
+        dest: ~/.zshrc
+    - copy:
+        src: ~/dotfiles/.vimrc
+        dest: ~/dotfiles/.vimrc
+    - copy:
+        src: ~/dotfiles/.vim
+        dest: ~/.vim
+    - copy:
+        src: ~/dotfiles/.tmux.conf
+        dest: ~/dotfiles/.tmux.conf
+    - copy:
+        src: ~/dotfiles/.oh-my-zsh/custom/themes/bullet-train.zsh-theme
+        dest: ~/.oh-my-zsh/themes/bullet-train.zsh-theme
+    - name: Install tpm
+      git:
+        repo: https://github.com/tmux-plugins/tpm
+        dest: ~/.tmux/plugins/tpm 
+        accept_hostkey: yes
+    - name: Install tmux plugins
+      command: ~/.tmux/plugins/tpm/bin/install_plugins
+      environment:
+        TMUX_PLUGIN_MANAGER_PATH: /home/ljohnson/.tmux/plugins
+    - debug: 
+        msg: EXIT your shell and log back in!
