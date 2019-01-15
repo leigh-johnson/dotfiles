@@ -1,4 +1,0 @@
-pane	setup	1	:zsh	1	:*	1	:/Users/ljohnson/slack/chef-repo	0	zsh	:
-pane	setup	1	:zsh	1	:*	2	:/Users/ljohnson/slack	1	zsh	:
-window	setup	1	1	:*	8a65,208x55,0,0{98x55,0,0,0,109x55,99,0,7}
-state	setup	

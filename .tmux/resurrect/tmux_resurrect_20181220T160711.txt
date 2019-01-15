@@ -1,8 +1,0 @@
-pane	setup	1	:ssh	1	:*	1	:/Users/ljohnson/slack/webapp	0	node	:npm   
-pane	setup	1	:ssh	1	:*	2	:/Users/ljohnson/dotfiles	0	vim	:vim /Users/ljohnson/.zshrc
-pane	setup	1	:ssh	1	:*	3	:/Users/ljohnson/slack/webapp	0	ssh	:ssh z-ops-ljohnson-kangaroo.ec2.tinyspeck.com
-pane	setup	1	:ssh	1	:*	4	:/Users/ljohnson	1	ssh	:ssh z-ops-ljohnson-kangaroo.ec2.tinyspeck.com
-pane	setup	1	:ssh	1	:*	5	:/Users/ljohnson	0	ssh	:ssh -t z-ops-ljohnson-rabbit.ec2.tinyspeck.com /bin/zsh
-pane	setup	1	:ssh	1	:*	6	:/Users/ljohnson/slack/webapp	0	zsh	:
-window	setup	1	1	:*	b148,238x57,0,0{79x57,0,0[79x20,0,0,14,79x28,0,21,15,79x7,0,50,17],158x57,80,0[158x26,80,0,18,158x6,80,27,19,158x23,80,34,21]}
-state	setup	

@@ -1,7 +1,0 @@
-pane	setup	1	:node	1	:*	1	:/Users/ljohnson/slack/webapp	1	node	:npm   
-pane	setup	1	:node	1	:*	2	:/Users/ljohnson/dotfiles	0	vim	:vim /Users/ljohnson/.zshrc
-pane	setup	1	:node	1	:*	3	:/Users/ljohnson	0	zsh	:
-pane	setup	1	:node	1	:*	4	:/Users/ljohnson/repos/ansible-role-dotfiles	0	zsh	:
-pane	setup	1	:node	1	:*	5	:/Users/ljohnson/slack/webapp	0	zsh	:
-window	setup	1	1	:*	f069,208x55,0,0{64x55,0,0[64x19,0,0,14,64x35,0,20,15],143x55,65,0[143x13,65,0,18,143x17,65,14,19,143x23,65,32,21]}
-state	setup	

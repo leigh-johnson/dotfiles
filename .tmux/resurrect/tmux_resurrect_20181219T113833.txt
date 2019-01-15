@@ -1,4 +1,0 @@
-pane	setup	1	:zsh	1	:*	1	:/Users/ljohnson/slack	0	zsh	:
-pane	setup	1	:zsh	1	:*	2	:/Users/ljohnson/slack	1	zsh	:
-window	setup	1	1	:*	e542,238x57,0,0{113x57,0,0,0,124x57,114,0,7}
-state	setup	

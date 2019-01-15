@@ -1,4 +1,0 @@
-pane	test	1	:vim	1	:*	1	:/Users/ljohnson	0	zsh	:
-pane	test	1	:vim	1	:*	2	:/Users/ljohnson	1	vim	:vim /Users/ljohnson/.tmux.conf
-window	test	1	1	:*	3930,208x54,0,0{52x54,0,0,0,155x54,53,0,1}
-state	test	

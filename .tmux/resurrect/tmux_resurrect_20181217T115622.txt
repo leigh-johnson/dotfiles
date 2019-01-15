@@ -1,5 +1,0 @@
-pane	setup	1	:zsh	1	:*	1	:/Users/ljohnson/docs	0	vim	:vim /Users/ljohnson/.tmux.conf
-pane	setup	1	:zsh	1	:*	2	:/Users/ljohnson/slack	1	zsh	:
-pane	setup	1	:zsh	1	:*	3	:/Users/ljohnson	0	zsh	:
-window	setup	1	1	:*	eddb,238x58,0,0{99x58,0,0,0,138x58,100,0[138x29,100,0,7,138x28,100,30,8]}
-state	setup	
