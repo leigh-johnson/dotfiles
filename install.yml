@@ -3,7 +3,10 @@
   tasks:
     - name: Install cowsay
       become: true
-      command: apt-get install cowsay
+      apt:
+        name: 
+            - cowsay
+            - xdg-utils
     - name: Enable `chsh`
       command: sed s/required/sufficient/g -i /etc/pam.d/chsh
       become: true
