@@ -1,0 +1,37 @@
+- name: Install Docker & Minikube
+  hosts: 127.0.0.1
+  tasks:
+    - name: Install pre-reqs
+      become: true
+      apt:
+        update_cache: yes
+        name: 
+            - apt-transport-https
+            - ca-certificates
+            - curl
+            - gnupg2
+            - software-properties-common
+    - name: Add Docker's gpg key
+      shell: curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
+      become: true
+    - name: Add Google packages gpg key
+      shell: curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
+      become: true
+    - name: Add Kubernetes xenial release repo
+      shell: echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee -a /etc/apt/sources.list.d/kubernetes.list
+    - name: Add Docker stable release repo
+      shell: |
+        add-apt-repository \ 
+        "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+        $(lsb_release -cs) stable"
+      become: true
+    - name: Install Docker
+      become: true
+      apt:
+        update_cache: yes
+        name:
+          - docker-ce
+          - kubectl
+    - name: Download Minikube
+      become: true
+      shell: curl -Lo /usr/local/bin/minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 && chmod +x /usr/local/bin/minikube
