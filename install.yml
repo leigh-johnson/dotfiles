@@ -1,0 +1,30 @@
+host: 127.0.0.1
+connection: local
+tasks:
+- name: Clone dotfiles repo
+  git:
+    repo: git@github.com:leigh-johnson/dotfiles.git
+    dest: ~/dotfiles
+- name: Install oh-my-zsh
+  command: sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+- copy:
+    src: ~/dotfiles/.zshrc
+    dest: ~/.zshrc
+- copy:
+    src: ~/dotfiles/.vimrc
+    dest: ~/dotfiles/.vimrc
+- copy:
+    src: ~/dotfiles/.vim
+    dest: ~/.vim
+- copy:
+    src: ~/dotfiles/.tmux.conf
+    dest: ~/dotfiles/.tmux.conf
+- copy:
+    src: ~/dotfiles/.oh-my-zsh/custom
+    dest: ~/.oh-my-zsh/custom
+- name: Install tpm
+  git:
+    repo: git clone https://github.com/tmux-plugins/tpm
+    dest: ~/.tmux/plugins/tpm
+- name: Install tmux plugins
+  command: .tmux/plugins/tpm/bin/install_plugins
