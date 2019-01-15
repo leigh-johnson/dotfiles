@@ -18,7 +18,8 @@
       shell: curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
       become: true
     - name: Add Kubernetes xenial release repo
-      shell: echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee -a /etc/apt/sources.list.d/kubernetes.list
+      become: true
+      shell: echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | tee -a /etc/apt/sources.list.d/kubernetes.list
     - name: Add Docker stable release repo
       shell: |
         add-apt-repository \ 
@@ -30,7 +31,7 @@
       apt:
         update_cache: yes
         name:
-          - docker-ce
+          - docker-ce=18.06.1~ce~3-0~ubuntu
           - kubectl
     - name: Download Minikube
       become: true
