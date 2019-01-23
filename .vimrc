@@ -1,15 +1,6 @@
+:set runtimepath+=~/.vim
 
-set number
-" fzf as a vim plugin
-" https://github.com/junegunn/fzf#as-vim-plugin
-
-set rtp+=/usr/local/opt/fzf
-set rtp+=~/.fzf
-
-
-
-" Use ag instead of ack
-let g:ackprg = 'ag --vimgrep'
+call plug#begin('~/.vim/plugged')
 
 " enable mouse mode
 set mouse=a
@@ -35,3 +26,6 @@ colorscheme bubblegum-256-dark
 
 " " airline theme
 let g:airline_theme='bubblegum'
+
+" Initialize plugin system
+call plug#end()

@@ -129,4 +129,7 @@ cpdotfiles () {
 	scp -rq ~/.zshrc ~/.oh-my-zsh ~/.vim ~/.vimrc ~/.tmux ~/.tmux.conf ~/.gitconfig $(id -un)@$1:~/
 }
 
+eval $(ssh-agent)
+
+
 # [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
