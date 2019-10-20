@@ -9,12 +9,12 @@ fi
 export TERM=xterm-256color
 
 # Path to your oh-my-zsh installation.
-if [[ "$OSTYPE" == "linux-gnu" ]]; then
+if [[ "$OSTYPE" == "linux-gnu" ]] || [[ "$OSTYPE" == "linux-gnueabihf" ]]; then
 	export ZSH="/home/$(id -un)/.oh-my-zsh"
  elif [[ "$OSTYPE" == "darwin"* ]]; then
 	 export ZSH="/Users/$(id -un)/.oh-my-zsh"
  else
-	 echo "add support for ${$OSTYPE} to your dotfile"
+	 echo "add support for ${OSTYPE} to your dotfile"
  fi
 
 # nvm

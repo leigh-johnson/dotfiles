@@ -11,6 +11,8 @@
       command: sed s/required/sufficient/g -i /etc/pam.d/chsh
       become: true
     - shell: sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+      args:
+          creates: "{{ansible_env.HOME}}/.oh-my-zsh"
     - copy:
         src: ~/dotfiles/.zshrc
         dest: ~/.zshrc
