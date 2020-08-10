@@ -22,7 +22,7 @@
         dest: ~/.zshrc
     - copy:
         src: ~/dotfiles/.vimrc
-        dest: ~/dotfiles/.vimrc
+        dest: ~/.vimrc
     - copy:
         src: ~/dotfiles/.vim
         dest: ~/
