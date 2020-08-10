@@ -121,15 +121,3 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-rmd () {
-	pandoc $1 | lynx -stdin
-}
-
-cpdotfiles () {
-	scp -rq ~/.zshrc ~/.oh-my-zsh ~/.vim ~/.vimrc ~/.tmux ~/.tmux.conf ~/.gitconfig $(id -un)@$1:~/
-}
-
-eval $(ssh-agent)
-
-
-# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

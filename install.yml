@@ -7,6 +7,10 @@
         name: 
             - cowsay
             - xdg-utils
+            - vim
+            - tmux
+            - zsh
+            - fzf
     - name: Enable `chsh`
       command: sed s/required/sufficient/g -i /etc/pam.d/chsh
       become: true
@@ -21,7 +25,7 @@
         dest: ~/dotfiles/.vimrc
     - copy:
         src: ~/dotfiles/.vim
-        dest: ~/.vim
+        dest: ~/
     - copy:
         src: ~/dotfiles/.tmux.conf
         dest: ~/.tmux.conf
